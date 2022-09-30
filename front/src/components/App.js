@@ -1,9 +1,11 @@
-import PictureItem from "./PictureItem";
+// import PictureItem from "./PictureItem";
+import FormPicture from "./formPicture";
 
 function App() {
   return (
     <div className="App">
-      <PictureItem />
+      {/*<PictureItem />*/}
+        <FormPicture />
     </div>
   );
 }
