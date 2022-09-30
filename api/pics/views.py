@@ -3,6 +3,13 @@ from .serializers import *
 
 class PictureViewset(ModelViewSet):
 
-    serializer_class = CreatePictrureSerializer
+
+    def get_serializer_class(self):
+        if self.action == 'create':
+            return CreatePictureSerializer
+        else:
+            return GetPictrureSerializer
+
+
     def get_queryset(self):
         return Picture.objects.all()

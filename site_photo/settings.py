@@ -25,9 +25,10 @@ SECRET_KEY = 'django-insecure-u%wg6t*ol0l0b@y3d_5_#^gxcbn3#6jhx20b2s-b0*reo9kel3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
-MEDIA_ROOT = 'medias'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR.joinpath('')
 
 
 # Application definition
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'api.pics',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -51,7 +53,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'site_photo.urls'
 

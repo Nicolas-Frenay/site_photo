@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
                 ('mount', models.CharField(choices=[('SA', 'Sky-Watcher Star Adventurer'), ('gem28', 'Ioptron GEM28')], max_length=32)),
                 ('tracking', models.BooleanField(default=True)),
                 ('location', models.CharField(max_length=64)),
-                ('image', models.ImageField(upload_to='medias/')),
+                ('image', models.ImageField(upload_to='media/')),
                 ('date_created', models.DateTimeField(auto_now_add=True)),
             ],
         ),

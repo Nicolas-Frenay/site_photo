@@ -44,5 +44,8 @@ class Picture(models.Model):
     focal: models.IntegerField()
     tracking = models.BooleanField(default=True)
     location = models.CharField(max_length=64)
-    image = models.ImageField(upload_to='medias/')
+    image = models.ImageField(upload_to='media/')
     date_created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
