@@ -1,7 +1,6 @@
 import '../styles/PictureItem.css'
 import {useState, useEffect} from "react";
 import {URL} from "../constants";
-// import get_picture from './ApiCall'
 
 function PictureItem() {
 
@@ -18,19 +17,29 @@ function PictureItem() {
 
     useEffect(() => {
         getPictures();
-        }, []);
+    }, []);
 
     return (
         <div className='photo'>
             <ul>
-                {pics.map(({id, name, scope, camera, mount, tracking, location, image}) => (
+                {pics.map(({
+                               id,
+                               name,
+                               scope,
+                               camera,
+                               mount,
+                               tracking,
+                               location,
+                               image
+                           }) => (
                     <li className='astro_pic' key={'photo' + id}>
-                        <img className='picture-item' src ={image} alt={`${name}`} />
+                        <img className='picture-item' src={image}
+                             alt={`${name}`}/>
                         <p>nom : {name}</p>
                         <p>telescope : {scope}</p>
                         <p>camera : {camera}</p>
                         <p>monture : {mount}</p>
-                        <p>guidage : {tracking ? 'oui' : 'non' }</p>
+                        <p>guidage : {tracking ? 'oui' : 'non'}</p>
                         <p>lieu : {location}</p>
 
                     </li>

@@ -1,13 +1,11 @@
-// import PictureItem from "./PictureItem";
-import FormPicture from "./formPicture";
+import PictureItem from "./PictureItem";
 
 function App() {
-  return (
-    <div className="App">
-      {/*<PictureItem />*/}
-        <FormPicture />
-    </div>
-  );
+    return (
+        <div className="App">
+            <PictureItem/>
+        </div>
+    );
 }
 
 export default App;

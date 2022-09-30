@@ -1,7 +1,8 @@
 import '../styles/form_picture.css'
+
 // import {useState} from "react";
 
-function FormPicture () {
+function FormPicture() {
 
     // const handleSubmit = (evt) => {
     //
@@ -35,13 +36,15 @@ function FormPicture () {
                 <div>
                     <label for="mount">Monture</label>
                     <select value="mount">
-                        <option name="STARADVENTURER">Sky-Watcher StatAdventurer</option>
+                        <option name="STARADVENTURER">Sky-Watcher
+                            StatAdventurer
+                        </option>
                         <option name="GEM28">iOptron GEM28</option>
                     </select>
                 </div>
                 <div>
                     <label for="focal">Longueur focale</label>
-                    <input type="number" name="focal" id="focal" />
+                    <input type="number" name="focal" id="focal"/>
                 </div>
                 <div>
                     <label for="tracking">Astro-guidage</label>
@@ -49,11 +52,12 @@ function FormPicture () {
                 </div>
                 <div>
                     <label for="location">Lieu d'observation</label>
-                    <input type="text" id="location" name="location" maxLength="64" />
+                    <input type="text" id="location" name="location"
+                           maxLength="64"/>
                 </div>
                 <div>
                     <label for="image">Choix de l'image</label>
-                    <input type="file" name="image" id="image" />
+                    <input type="file" name="image" id="image"/>
                 </div>
             </form>
         </div>

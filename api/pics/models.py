@@ -16,7 +16,7 @@ class Picture(models.Model):
     ASI294 = 'ASI294'
     K1 = 'K1'
 
-    #mount models
+    # mount models
     STARADVENTURER = "SA"
     GEM28 = 'gem28'
 
