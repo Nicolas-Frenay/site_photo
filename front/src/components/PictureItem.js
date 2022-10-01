@@ -20,8 +20,7 @@ function PictureItem() {
     }, []);
 
     return (
-        <div className='photo'>
-            <ul>
+        <div className="photo-gallery">
                 {pics.map(({
                                id,
                                name,
@@ -32,19 +31,21 @@ function PictureItem() {
                                location,
                                image
                            }) => (
-                    <li className='astro_pic' key={'photo' + id}>
-                        <img className='picture-item' src={image}
-                             alt={`${name}`}/>
-                        <p>nom : {name}</p>
-                        <p>telescope : {scope}</p>
-                        <p>camera : {camera}</p>
-                        <p>monture : {mount}</p>
-                        <p>guidage : {tracking ? 'oui' : 'non'}</p>
-                        <p>lieu : {location}</p>
-
-                    </li>
+                    <div className='astro_pic' key={'photo' + id}>
+                        <div className="photo-box">
+                            <img className='picture-item' src={image}
+                                 alt={`${name}`}/>
+                            <div className="description">
+                                <p>nom : {name}</p>
+                                <p>telescope : {scope}</p>
+                                <p>camera : {camera}</p>
+                                <p>monture : {mount}</p>
+                                <p>guidage : {tracking ? 'oui' : 'non'}</p>
+                                <p>lieu : {location}</p>
+                            </div>
+                        </div>
+                    </div>
                 ))}
-            </ul>
         </div>
     )
 }

@@ -1,3 +1,22 @@
 .picture-item {
-    width: 500px;
+    width: 90%;
+}
+
+.photo-box {
+    margin-top: 3%;
+    border-radius: 10px;
+    width: 15%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    background-color: ivory;
+}
+
+.photo-gallery {
+    margin: 0 auto;
+    width: 90%;
+    /*background-color: green;*/
 }
