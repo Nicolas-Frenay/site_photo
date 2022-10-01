@@ -18,7 +18,7 @@ class Picture(models.Model):
 
     # mount models
     STARADVENTURER = "SA"
-    GEM28 = 'gem28'
+    GEM28 = 'GEM28'
 
     SCOPE_LIST = (
         (NEWTON750, 'Sky-Watcher Newton 150-750'),
