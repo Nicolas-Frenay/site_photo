@@ -19,6 +19,9 @@ from api.pics.views import PictureViewset
 from rest_framework import routers
 from django.conf.urls.static import static
 from django.conf import settings
+from rest_framework_simplejwt.views import TokenRefreshView, \
+    TokenObtainPairView
+from api.authentication.views import RegisterView
 
 router = routers.SimpleRouter()
 router.register('pictures', PictureViewset, basename='pictures')
@@ -26,6 +29,10 @@ router.register('pictures', PictureViewset, basename='pictures')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('login/', TokenObtainPairView.as_view(), name='token_obtain_pairs'),
+    path('api/login/refresh/', TokenRefreshView.as_view(),
+         name='refresh_token'),
+    path('api/signup/', RegisterView.as_view(), name='auth_register')
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

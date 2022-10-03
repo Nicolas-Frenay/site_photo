@@ -38,7 +38,7 @@ function FormPicture() {
                 headers: {},
                 body: form,
             });
-            if (res.status === 200) {
+            if (res.status === 201) {
                 setName("");
                 setScope("");
                 setCamera("");
@@ -47,11 +47,12 @@ function FormPicture() {
                 setFocal("");
                 setLocation("");
                 setImage(null);
+                navigate('/');
             }
         } catch (err) {
             console.log(err);
         }
-        navigate('/');
+
     }
 
 
