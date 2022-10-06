@@ -19,6 +19,7 @@ class GetPictrureSerializer(ModelSerializer):
         model = Picture
         # fields = '__all__'
         fields = [
+            'id',
             'image',
             'name',
             'scope',
