@@ -2,8 +2,12 @@ import '../styles/form_picture.css'
 import {useState} from "react";
 import {URL} from '../constants'
 import {useNavigate} from "react-router-dom";
+import {useCookies} from "react-cookie";
 
 function FormPicture() {
+    const [cookie, setCookie] = useCookies(['access'])
+
+
     const navigate = useNavigate()
     const [name, setName] = useState('')
     const [scope, setScope] = useState('')
@@ -35,7 +39,7 @@ function FormPicture() {
         try {
             let res = await fetch(URL, {
                 method: "POST",
-                headers: {},
+                headers: {"Authorization": 'Bearer ' + cookie.access},
                 body: form,
             });
             if (res.status === 201) {
