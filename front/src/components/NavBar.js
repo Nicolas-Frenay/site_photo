@@ -8,6 +8,7 @@ function NavBar () {
                 <img className="logo" src={require('../assets/galaxy.png')} alt="galaxy" />
                 <Link to="/">Home</Link>
                 <Link to="/upload">Upload</Link>
+                <Link to="/login">Connexion</Link>
                 <p className="title">Milhouse Astro</p>
             </div>
         </nav>
